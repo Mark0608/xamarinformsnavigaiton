@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace XamarinFormsNavigation
@@ -13,6 +8,11 @@ namespace XamarinFormsNavigation
         public FirstPage()
         {
             InitializeComponent();
+        }
+
+        private async void NavigateToSecondPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SecondPage(), true);
         }
     }
 }

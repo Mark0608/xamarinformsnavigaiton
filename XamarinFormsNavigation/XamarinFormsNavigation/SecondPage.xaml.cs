@@ -14,5 +14,16 @@ namespace XamarinFormsNavigation
         {
             InitializeComponent();
         }
+
+        private void RemoveFirstPage(object sender, EventArgs e)
+        {
+            var firstPage = Navigation.NavigationStack[1];
+            Navigation.RemovePage(firstPage);
+        }
+
+        private async void BackToRoot(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
     }
 }
